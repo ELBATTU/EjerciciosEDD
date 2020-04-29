@@ -23,7 +23,7 @@ public class Herramientas {
 		
         
 					try {			
-					for (int i = 0; i < 30+1; i++) {
+					for (int i = 0; i < 30+3; i++) {
 				             valorDado = r.nextInt(3);
 				             if (valorDado == 0) {
 						int madera = (valorDado);	
