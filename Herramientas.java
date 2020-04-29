@@ -13,7 +13,7 @@ public class Herramientas {
 
 	public static void main(String[] args) {
 		
-		int elem = 0,elem2 = 0,elem3=0,elem4=0;
+		int elem = 0,elem2 = 0,elem3=0,elem4=0,valorDado=0;
         boolean mesa = false, baston = false, cuerda = false;
         int contme=0,contba=0,contca=0,contbar=0,contcuer=0;
 	Random r = new Random();		
