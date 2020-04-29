@@ -1,9 +1,10 @@
+import java.util.Random;
 /*
-  PAREJA DE "LOS GARCÍA"
+  PAREJA DE "LOS GARCÃA"
  * 
  * INTEGRANTES:
- * GARCÍA GACHUZO CONSTANZA
- * GARCÍA CAMACHO JAIME
+ * GARCÃA GACHUZO CONSTANZA
+ * GARCÃA CAMACHO JAIME
  * 
  * EJERCICIO: HERRAMIENTAS
  * 
@@ -15,21 +16,29 @@ public class Herramientas {
 		int elem = 0,elem2 = 0,elem3=0,elem4=0;
         boolean mesa = false, baston = false, cuerda = false;
         int contme=0,contba=0,contca=0,contbar=0,contcuer=0;
-		
+	Random r = new Random();		
         PilaMadera PilaM = new PilaMadera(31);
 		PilaResina PilaR = new PilaResina(31);
 		PilaHilo PilaH = new PilaHilo(31);
 		
         
 					try {			
-						for (int i = 0; i < 30+1; i++) {
-							
-							int madera = (0);	
-							int resina = (1);
-							int hilo = (2); 
-							PilaM.apilar(madera);	
+					for (int i = 0; i < 30+1; i++) {
+				             valorDado = r.nextInt(3);
+				             if (valorDado == 0) {
+						int madera = (valorDado);	
+						PilaM.apilar(madera);	
+						}else {
+						   if (valorDado == 1) {
+							int resina = (valorDado);
 							PilaR.apilar(resina);	
-							PilaH.apilar(hilo);	
+							}else {
+						           if (valorDado == 2) {
+								int hilo = (valorDado); 
+								PilaH.apilar(hilo);	
+									}
+								}
+							}
 							//Concatenar elem con +=           
 								
 						}
@@ -126,7 +135,7 @@ public class Herramientas {
                     System.out.println("\nMesa adquirida "+"("+contme+")"); 
                     System.out.println("\nBaston adquirido "+"("+contba+")");
                     System.out.println("\nCuerda adquirida "+"("+contcuer+")"); 
-                    System.out.println("\nCaña adquirida "+"("+contca+")"); 
+                    System.out.println("\nCaÃ±a adquirida "+"("+contca+")"); 
                     System.out.println("\nBarco adquirido "+"("+contbar+")"); 
 					System.out.println("\nCantidad final de madera: "+PilaM.cantidad()+"");
 					System.out.println("Cantidad final de resina: "+PilaR.cantidad()+"");
