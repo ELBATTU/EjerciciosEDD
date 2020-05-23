@@ -1,9 +1,9 @@
 /*
- * PAREJA DE "LOS GARCÕA"
+ * PAREJA DE "LOS GARC√çA"
  * 
  * INTEGRANTES:
- * GARCÕA GACHUZO CONSTANZA
- * GARCÕA CAMACHO JAIME
+ * GARC√çA GACHUZO CONSTANZA
+ * GARC√çA CAMACHO JAIME
  * 
  * EJERCICIO: NODO CON DATOS STRING
  * 
@@ -15,15 +15,15 @@ public class EjercicioNodoString {
 
 	public static void main(String[] args) {
 
-		String Valor = "";
+		String Valor = "",Respuesta="";
 		NodoString Inicial = null;
 		NodoString SigNod = null;
 		NodoString NodActual = null;
 		NodoString ref = null;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Bienvenido vamos a guardar 10 cadenas :)\n");
-		for (int i = 0; i < 10; i++) {
-			System.out.println("ingresa la cadena "+(i+1));
+		System.out.println("Bienvenido vamos a guardar cadenas :)\n");
+		do {
+			System.out.println("ingresa la cadena");
 			Valor = sc.next();
 			if (Inicial == null) {
 				Inicial = new NodoString(null,Valor);
@@ -33,12 +33,15 @@ public class EjercicioNodoString {
 				NodActual.Siguiente = SigNod;
 				NodActual = SigNod;
 			}
-		}
+			System.out.println("Deseas agregar otra? S/N");
+			Respuesta = sc.next();
+		} while (Respuesta.compareToIgnoreCase("S") == 0);
+		
 		ref = Inicial;
 		while (ref != null) {
 			System.out.println("Valor "+ref);
 			ref = ref.Siguiente;
-			}
+		}
 	}
 }
 class NodoString {
